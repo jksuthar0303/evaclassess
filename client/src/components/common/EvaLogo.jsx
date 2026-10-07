@@ -23,11 +23,11 @@ export function EvaLogo({ size = 'md', showText = true, className = '', textColo
       {showText && (
         <div className="flex flex-col leading-none">
           <div className="flex items-center">
-            <span className={`font-black tracking-tight ${selectedSize.title} ${textColor}`}>
-              EVA <span className="text-[#be123c]">CLASSES</span>
+            <span className={`eva-brand-title font-black ${selectedSize.title} ${textColor}`}>
+              EVA <span className="eva-brand-accent text-[#be123c]">CLASSES</span>
             </span>
           </div>
-          <span className={`font-extrabold uppercase tracking-widest ${selectedSize.sub} ${subtextColor} mt-0.5`}>
+          <span className={`eva-brand-subtitle font-extrabold uppercase ${selectedSize.sub} ${subtextColor} mt-0.5`}>
             Bikaner • Exam Prep
           </span>
         </div>

@@ -22,6 +22,7 @@ import {
   ArrowRight,
   ExternalLink,
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import {
   MOCK_TEST_CATEGORIES,
   MOCK_TEST_SERIES_PACKAGES,
@@ -30,6 +31,7 @@ import {
 import { EvaLogo } from '../../../../components/common/EvaLogo';
 
 export function MockTests() {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedPackage, setSelectedPackage] = useState(null);
   
@@ -81,18 +83,12 @@ export function MockTests() {
 
   // Start CBT Test
   const handleStartTest = (testItem, packageItem) => {
-    setActiveCbtTest({
-      ...testItem,
-      packageName: packageItem?.title || 'EVA Classes All India Mock Test',
-    });
-    setCurrentQuestionIndex(0);
-    setUserAnswers({});
-    setMarkedForReview(new Set());
-    setVisitedQuestions(new Set([1]));
-    setTimeLeftSeconds(900);
-    setIsTestSubmitted(false);
-    setShowSubmitConfirm(false);
     setSelectedPackage(null);
+    const examSlug = (packageItem?.exam || 'exam')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+    navigate(`/exam/${examSlug}?mode=login`);
   };
 
   // CBT Question Handlers

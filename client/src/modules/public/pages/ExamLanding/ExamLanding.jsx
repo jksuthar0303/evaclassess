@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate, useSearchParams } from 'react-router-dom';
 import {
   CheckCircle2,
   Mail,
@@ -27,10 +27,11 @@ import { EvaLogo } from '../../../../components/common/EvaLogo';
 export function ExamLanding() {
   const { examId } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { login, isAuthenticated, user } = useAuthStore();
 
   // Registration/Login Card Form State
-  const [isLoginMode, setIsLoginMode] = useState(false);
+  const [isLoginMode, setIsLoginMode] = useState(searchParams.get('mode') === 'login');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -400,7 +401,8 @@ export function ExamLanding() {
 
             <div className="mt-6 pt-4 border-t border-slate-100">
               <Link
-                to="/courses"
+                to={`/exam/${exam.id}`}
+                onClick={() => setIsLoginMode(true)}
                 className="w-full py-3 rounded-xl bg-[#c8102e] hover:bg-[#a50d24] text-white font-bold text-xs sm:text-sm text-center block transition-colors"
               >
                 Join Live Batch
@@ -438,7 +440,8 @@ export function ExamLanding() {
 
             <div className="mt-6 pt-4 border-t border-slate-100">
               <Link
-                to="/courses"
+                to={`/exam/${exam.id}`}
+                onClick={() => setIsLoginMode(true)}
                 className="w-full py-3 rounded-xl bg-white border border-slate-300 text-slate-800 hover:bg-slate-50 font-bold text-xs sm:text-sm text-center block transition-colors"
               >
                 View Batch Schedule
