@@ -1,0 +1,32 @@
+export const DAILY_CURRENT_AFFAIRS = [
+  {
+    id: 'ca-1',
+    title: 'India-EFTA Trade and Economic Partnership Agreement: Key Highlights for Prelims & Mains',
+    category: 'Economy & International Relations',
+    date: 'Oct 04, 2026',
+    readTime: '4 min read',
+    tags: ['GS Paper 2', 'GS Paper 3', 'Bilateral Trade'],
+    summary: 'Analysis of tariff cuts, Swiss investments commitment of $100B, and intellectual property provisions.',
+    pdfUrl: '#',
+  },
+  {
+    id: 'ca-2',
+    title: 'ISRO Announces Next Generation Launch Vehicle (NGLV) - Project SOORYA Architecture',
+    category: 'Science & Technology',
+    date: 'Oct 04, 2026',
+    readTime: '3 min read',
+    tags: ['Science & Tech', 'ISRO', 'Space Missions'],
+    summary: 'Key propulsion details, semi-cryogenic stages, reusable booster concepts, and Indian space station delivery.',
+    pdfUrl: '#',
+  },
+  {
+    id: 'ca-3',
+    title: 'RBI Monetary Policy Committee Review: Repo Rate, Inflation Trajectory & Liquidity Stance',
+    category: 'Banking & Financial Awareness',
+    date: 'Oct 03, 2026',
+    readTime: '5 min read',
+    tags: ['Banking', 'RBI Policy', 'Inflation'],
+    summary: 'Monetary stance, SDF and MSF rates, CPI targets for FY27, and bank credit growth trajectory.',
+    pdfUrl: '#',
+  },
+];

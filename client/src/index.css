@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "./styles/index.css";
+
+/* The library search stays white even when the app theme is dark. */
+.search-library-modal,
+.search-library-modal-header {
+  background: #fff !important;
+  border-color: #f1f5f9 !important;
+}
+
+.search-library-modal-title {
+  color: #0f172a !important;
+}
+
+@media (max-width: 640px) {
+  .search-library-modal {
+    max-height: calc(100dvh - 2rem);
+    border-radius: 1rem !important;
+  }
+
+  .search-library-modal > div:last-child {
+    padding: 1rem !important;
+    max-height: calc(100dvh - 7rem) !important;
+  }
+
+  .search-library-modal-header {
+    padding: 0.875rem 1rem !important;
+  }
+
+  .search-library-modal-title {
+    font-size: 0.95rem !important;
+  }
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

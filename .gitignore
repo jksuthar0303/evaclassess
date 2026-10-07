@@ -1,0 +1,149 @@
+# ==========================================
+# Root .gitignore for evaclasees
+# (Covers root, client, server, and app)
+# ==========================================
+
+# ------------------------------------------
+# 1. Dependencies (Client, Server, App)
+# ------------------------------------------
+node_modules/
+jspm_packages/
+.pnp
+.pnp.js
+
+# ------------------------------------------
+# 2. Environment Variables & Secrets
+# ------------------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+*.env
+# Keep template/example files tracked:
+!.env.example
+!.env.sample
+!.env.template
+
+# ------------------------------------------
+# 3. Logs & Process Files
+# ------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.dev-server*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ------------------------------------------
+# 4. Build Outputs & Cache
+# ------------------------------------------
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+.turbo/
+.cache/
+.parcel-cache/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# ------------------------------------------
+# 5. Testing & Coverage
+# ------------------------------------------
+coverage/
+.nyc_output/
+*.lcov
+.clinic/
+
+# ------------------------------------------
+# 6. Backend / Server Specific
+# ------------------------------------------
+# Uploaded & temporary files
+uploads/
+temp/
+tmp/
+
+# SQLite & local databases
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# SSL keys & certificates
+*.pem
+*.key
+*.cert
+*.crt
+
+# ------------------------------------------
+# 7. Mobile App (React Native / Expo / Flutter / Native)
+# ------------------------------------------
+# Expo
+.expo/
+.expo-shared/
+web-build/
+
+# React Native / Metro
+.metro-health-check*
+
+# Android (Root or inside app/)
+**/android/.gradle/
+**/android/app/build/
+**/android/build/
+**/android/local.properties
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# iOS (Root or inside app/)
+**/ios/Pods/
+**/ios/build/
+**/ios/DerivedData/
+*.ipa
+*.xcuserstate
+**/xcuserdata/
+
+# Flutter (if applicable)
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# ------------------------------------------
+# 8. OS Generated Files
+# ------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# ------------------------------------------
+# 9. IDE & Editor Files
+# ------------------------------------------
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
