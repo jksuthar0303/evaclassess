@@ -500,7 +500,7 @@ export function MockTests() {
         <div className="fixed inset-0 z-50 bg-[#f8fafc] flex flex-col overflow-hidden animate-in fade-in">
           
           {/* CBT Header */}
-          <header className="bg-slate-900 text-white px-4 sm:px-6 py-3 border-b border-slate-800 flex items-center justify-between gap-4 shrink-0 shadow-md">
+          <header className="bg-slate-900 text-white px-3 sm:px-6 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3 shrink-0 shadow-md">
             <div className="flex items-center gap-3">
               <EvaLogo size="sm" showText={false} />
               <div>
@@ -513,7 +513,7 @@ export function MockTests() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-4">
               {/* Language Switcher */}
               <div className="flex items-center gap-1 bg-slate-800 p-1 rounded-lg border border-slate-700 text-xs font-bold">
                 <button

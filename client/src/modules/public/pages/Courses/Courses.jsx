@@ -795,7 +795,7 @@ export function Courses() {
       {/* 3. MODAL: EXAM DETAILS & ACTIVE LIVE BATCHES */}
       {selectedExamDetails && (
         <div className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+          <div className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto p-4 sm:p-6 shadow-2xl relative">
             <button
               type="button"
               onClick={() => setSelectedExamDetails(null)}

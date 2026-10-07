@@ -25,13 +25,13 @@ export function PublicLayout() {
   );
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-800">
+    <div className="min-h-screen min-w-0 flex flex-col overflow-x-hidden bg-white text-slate-800">
       <PublicHeader
         onOpenSearch={() => setSearchOpen(true)}
         onOpenAuth={(mode) => setAuthMode(mode)}
       />
 
-      <main className="flex-1">
+      <main className="min-w-0 flex-1 overflow-x-hidden">
         <Outlet />
       </main>
 
