@@ -159,7 +159,7 @@ export function Testimonials() {
           <button
             type="button"
             onClick={toggleExpand}
-            className="group flex items-center gap-1.5 text-sm sm:text-[15px] font-bold text-[#c8102e] hover:text-[#a50d24] transition-colors cursor-pointer select-none"
+            className="group hidden sm:flex items-center gap-1.5 text-sm sm:text-[15px] font-bold text-[#c8102e] hover:text-[#a50d24] transition-colors cursor-pointer select-none"
           >
             <span>{isExpanded ? 'View less' : 'View more'}</span>
             <div className="w-5 h-5 rounded-full bg-[#c8102e] group-hover:bg-[#a50d24] text-white flex items-center justify-center transition-transform duration-200">
